@@ -93,6 +93,9 @@
                                                 <constraint firstAttribute="width" constant="30" id="TYI-FC-piu"/>
                                             </constraints>
                                             <state key="normal" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="favoriteTweet:" destination="oCS-Pu-kTs" eventType="touchUpInside" id="UDy-Ce-3O3"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnk-9K-4gH" userLabel="retweetButton">
                                             <rect key="frame" x="314" y="99" width="30" height="30"/>
@@ -101,6 +104,9 @@
                                                 <constraint firstAttribute="width" constant="30" id="oHG-tf-ODO"/>
                                             </constraints>
                                             <state key="normal" image="retweet-icon"/>
+                                            <connections>
+                                                <action selector="retweet:" destination="oCS-Pu-kTs" eventType="touchUpInside" id="Mm5-Ht-WYF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -124,7 +130,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favButton" destination="YAi-JP-yyK" id="NHK-JF-Bff"/>
                                     <outlet property="profileImageView" destination="9fM-a9-27W" id="ReB-hd-rUb"/>
+                                    <outlet property="retweetButton" destination="xnk-9K-4gH" id="Ojv-qb-uav"/>
                                     <outlet property="tweetContent" destination="lmI-89-6cX" id="8Rt-lw-ai4"/>
                                     <outlet property="userNameLabel" destination="Sm8-Z8-FZp" id="W5M-s4-FQZ"/>
                                 </connections>
@@ -185,6 +193,9 @@
                     <navigationItem key="navigationItem" id="07y-rQ-sfq">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="eGY-eb-yNr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancel:" destination="cFW-gd-ctC" id="cAX-pa-U0m"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="HQs-ew-HRH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
