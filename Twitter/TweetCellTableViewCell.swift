@@ -19,7 +19,7 @@ class TweetCellTableViewCell: UITableViewCell {
     
     var favorited: Bool = false
     var tweetId: Int = -1
-    var retweeted: Bool = false
+    
     
     @IBAction func favoriteTweet(_ sender: Any) {
         let toBeFavorited = !favorited
@@ -31,8 +31,8 @@ class TweetCellTableViewCell: UITableViewCell {
             })
         }
         else {
-            TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
-                self.setFavorite(true)
+            TwitterAPICaller.client?.unfavoriteTweet(tweetId: tweetId, success: {
+                self.setFavorite(false)
             }, failure: { (error) in
                 print("Unfavorite did not succeed: \(error)")
             })
